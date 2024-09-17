@@ -129,41 +129,100 @@ a {
     color: white;
 }
 
-.navbar li{
-    height: 50px;
-    width: center; 
-    text-align: center; 
-    font: normal bold 13px/1em Arial, Verdana, Helvetica;  
+/* Menu Principal - visible sur ordinateur */
+.navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
-.navbar a{							
-    padding: 20px 0;  
+.navbar li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar li a {
+    padding: 20px;
     color: white;
-    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.navbar li:hover, a:hover {
-    background-color: #ffffff00;
-} 
+.navbar li ul {
+    display: none; /* Masquer les sous-menus par défaut */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1d70b1;
+    padding: 10px 0;
+    list-style: none;
+}
 
-.navbar li ul{
-    display: none;
-    height: auto;									
-    margin: 0; 
-    padding: 0; 
-}	
-
-.navbar li:hover ul{
-    display: block;
+.navbar li:hover ul {
+    display: block; /* Afficher les sous-menus au survol */
 }
 
 .navbar li ul li {
-background-color: #ffffff00;
-} 
+    padding: 10px;
+}
 
-.navbar li ul li a:hover{
+.navbar li ul li a {
+    color: white;
+}
+
+.navbar li ul li a:hover {
     background-color: #20aafa;
-    margin: 10px;
+}
+
+/* Styles pour mobile - Réduire le menu en hamburger */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Masquer le menu sur mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #407cd6;
+        z-index: 1000;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .navbar li ul {
+        position: static;
+        display: block;
+        padding-left: 0;
+    }
+
+    .navbar li a {
+        padding: 10px;
+    }
+
+    /* Hamburger icon */
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Afficher le menu après avoir cliqué sur le hamburger */
+    .navbar.active {
+        display: flex;
+    }
+}
+
+/* Styles pour les écrans larges (afficher directement le menu) */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; /* Cacher le bouton hamburger sur les grands écrans */
+    }
 }
 
 .accueil-div {
