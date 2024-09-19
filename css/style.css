@@ -2,8 +2,8 @@
 .scroll-icon {
     display: inline-block;
     position: absolute;
-    width: 24px;
-    height: 24px;
+    /* width: 24px;
+    height: 24px; */
     top: 17%;
     left: 50%;
     transform: translateX(-50%);
@@ -481,7 +481,6 @@ a {
 
 .loisirs {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
