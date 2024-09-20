@@ -2,9 +2,7 @@
 .scroll-icon {
     display: inline-block;
     position: absolute;
-    /* width: 24px;
-    height: 24px; */
-    top: 17%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -66,6 +64,17 @@
     }
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .scroll-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .chevron {
+        width: 10px;
+        height: 5px;
+    }
+}
 
 /* Page */ 
 html {
@@ -149,7 +158,7 @@ a {
 }
 
 .navbar li ul {
-    display: none; /* Masquer les sous-menus par défaut */
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -159,7 +168,7 @@ a {
 }
 
 .navbar li:hover ul {
-    display: block; /* Afficher les sous-menus au survol */
+    display: block; 
 }
 
 .navbar li ul li {
@@ -177,7 +186,7 @@ a {
 /* Styles pour mobile - Réduire le menu en hamburger */
 @media (max-width: 768px) {
     .navbar {
-        display: none; /* Masquer le menu sur mobile */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -289,6 +298,7 @@ a {
     transform: translateY(0);
 }
 
+
 /* Formations */
 .formations {
     background-color: #d3e7ff;
@@ -382,48 +392,30 @@ a {
     font-size: 22px;
 }
 
-/* Styles pour les écrans plus petits */
-@media (max-width: 768px) {
-    .box-timeline {
-        padding: 40px 0;
-    }
-
-    .ligne {
-        height: 300px;
-    }
-
-    .rond {
-        width: 60px;
-        height: 60px;
-        font-size: 30px;
-    }
-
+/* Pour les écrans larges */
+@media (min-width: 768px) {
     .box {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
+        display: inline-block;
+        width: 30%;
+        margin: 10px;
     }
 }
-
-@media (max-width: 480px) {
-    .box-timeline {
-        padding: 20px 0;
-    }
-
-    .ligne {
-        height: 200px;
-    }
-
-    .rond {
-        width: 50px;
-        height: 50px;
-        font-size: 25px;
-    }
-
+  
+/* Pour les écrans moyens (tablettes) */
+@media (max-width: 767px) {
     .box {
-        width: 50%;
-        padding: 5px;
-        margin: 5px 0;
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+  
+/* Pour les petits écrans (smartphones) */
+@media (max-width: 480px) {
+    .rond {
+        display: none; /* Masquer les cercles */
+    }
+    .ligne {
+        display: none; /* Masquer la ligne */
     }
 }
 
@@ -486,7 +478,7 @@ a {
 
 .loisir {
     width: 15%;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     margin: 10px;
@@ -578,16 +570,11 @@ transform: scale(1.1);
 }
 
 .section-langues {
+    list-style: none;
     display: flex;
-    width: 100%;
     height: auto;
+    width: 100%;
     justify-content: space-around;
-    align-items: center;
-}
-
-.langue {
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
   

@@ -18,3 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', handleScroll);
 });
+
+const lastModified = document.lastModified;
+const formattedDate = moment(lastModified).locale('fr').format('DD/MM/YYYY à HH:mm'); // Formatage date
+document.getElementById("last-modified").textContent = formattedDate;
