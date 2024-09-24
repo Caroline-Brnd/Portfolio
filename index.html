@@ -12,6 +12,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     </head>
     <body>
+
+        <div class="btn">
+            <img src="./img/arrow-angle-up-solid-white.svg" class="icone">
+        </div>
+
         <!--Bar de menu-->
         <section class="accueil1" id="accueil">
             <div class="hamburger" onclick="toggleMenu()">☰</div>
@@ -69,6 +74,9 @@
                 <div class="icon"><img src="img/icons8-javascript.svg" alt="js">
                     <h5>Javascript</h5>
                 </div>
+                <div class="icon"><img src="img/python.svg" alt="python">
+                    <h5>Python</h5>
+                </div>
                 <div class="icon"><img src="img/PhpMyAdmin_logo.svg" alt="phpmyadmin">
                     <h5>PhpMyAdmin</h5>
                 </div>
@@ -113,6 +121,9 @@
                 </div>
                 <div class="icon"><img src="img/unity-seeklogo.com.svg" alt="unity">
                     <h5>Unity</h5>
+                </div>
+                <div class="icon"><img src="img/arduino.svg" alt="arduino">
+                    <h5>Arduino</h5>
                 </div>
                 <div class="icon"><img src="img/microsoft-windows-22.svg" alt="windows">
                     <h5>Windows</h5>
@@ -229,7 +240,7 @@
                 <div class="loisir"><i class="fas fa-camera"></i>
                     <p>Photographie</p>
                 </div>
-                <div class="loisir"><img src="img/billard.png"/>
+                <div class="loisir"><img src="img/ball-billiard.svg"/>
                     <p>Billard</p>
                 </div>
                 <div class="loisir"><i class="fas fa-football-ball"></i>
@@ -238,8 +249,11 @@
                 <div class="loisir"><i class="fas fa-film"></i>
                     <p>Films et Séries</p>
                 </div>
-                <div class="loisir"><img src="img/tennis.png"/>
+                <div class="loisir"><img src="img/tennis.svg"/>
                     <p>Tennis</p>
+                </div>
+                <div class="loisir"><img src="img/padlock-outlined.svg"/>
+                    <p>Escape Game</p>
                 </div>
             </div>
         </section>
@@ -251,20 +265,9 @@
                 <form action="https://formspree.io/f/myzgaoko" method="POST">
                    <input type="text" name="prenom" placeholder="Prénom" class="contact-input" required="required">
                     <input type="text" name="nom" placeholder="Nom" class="contact-input" required="required">
-                    <input type="mail" name="email" placeholder="Email" class="contact-input" required="required">
+                    <input type="email" name="email" id="email" placeholder="Email" class="contact-input" required="required">
+                    <span id="email-valid"></span>
                     <textarea name="message" id="" cols="0" rows="10" placeholder="Messages ..." class="contact-input" required="required"></textarea>
-                    <!-- <div class="contact-info">
-                        <input type="radio" id="etudiant" name="drone" value="etudiant" checked>
-                        <label for="etudiant">Etudiant.e</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="professeur" name="drone" value="professeur">
-                        <label for="professeur">Enseignant.e</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="recruteur" name="drone" value="recruteur">
-                        <label for="recruteur">Recruteur</label>
-                    </div> -->
                     <button type="submit" class="plus">Envoyer</button>
                 </form>
             </div>
@@ -298,6 +301,9 @@
             <p>Dernière mise à jour : <span id="last-modified"></span></p>
             <p class="footer-droit">&#169; Brnd. Tous droits réservés</p>
         </footer>
+
+        
         <script src="js/script.js"></script>
+        
     </body>
 </html>
